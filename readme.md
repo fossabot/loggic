@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAndre221%2Floggic.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAndre221%2Floggic?ref=badge_shield)
+
 Loggic
 ============
 A module to help you log things from your application!
@@ -48,3 +50,7 @@ Now to use you can do this  :
 ```js
 loggic.loadFromTemplate('test')
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAndre221%2Floggic.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FAndre221%2Floggic?ref=badge_large)
