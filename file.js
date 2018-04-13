@@ -1,17 +1,3 @@
-var {
-    log,
-    addTemplate,
-    loadFromTemplate
-} = require('./logger.js/index');
+var loggic = require('./index');
 
-addTemplate('test', {
-    text: 'App started',
-    color: 'green'
-}, 'test-app')
-
-log({
-    text: 'App started',
-    color: 'red'
-}, 'test-app')
-
-loadFromTemplate('test')
+loggic.warn('Hello!')

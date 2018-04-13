@@ -35,6 +35,16 @@ Output:
 $ [2018-2-27|17-12-46:25]-[index.js] - App started
 ```
 
+
+Also we have something like:
+```js 
+loggic.warn('I need food.')
+```
+This will log :
+```bash
+$ [2018-3-14|13-6-40:852]-[WARN] - Hello!
+```
+
 Also Loggic support templates, example : 
 ```js
 loggic.addTemplate('test', {

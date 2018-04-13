@@ -26,5 +26,12 @@ module.exports = {
 
         log(t.text, t.from)
 
+    },
+    templates() {
+
+        return templates
+
     }
 }
+
+module.exports = require('./loging')
