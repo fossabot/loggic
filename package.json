@@ -1,11 +1,10 @@
 {
   "name": "loggic",
-  "version": "1.4.0",
+  "version": "1.8.3",
   "description": "A little module to help you to log things to your applications",
   "main": "index.js",
   "dependencies": {
-    "chalk": "^2.3.2",
-    "moment": "^2.21.0"
+    "chalk": "^2.3.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,8 +12,16 @@
     "push": "git push origin master"
   },
   "keywords": [
-    "loggic"    
+    "loggic"
   ],
   "author": "andrew221",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andre221/loggic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Andre221/loggic/issues"
+  },
+  "homepage": "https://github.com/Andre221/loggic#readme"
 }
