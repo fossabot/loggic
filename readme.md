@@ -55,3 +55,29 @@ l.loadFromTemplate('test')
 console.log(l.templates)
 ```
 ^ this will log a object
+
+Config
+==
+If you want to set something
+
+
+When you do 
+
+```js
+var l = new loggic()
+```
+
+In `()` you can write a object, with settings
+like :
+`({key: value})` but this is the syntax
+
+Let's go to the real settings/config/opts/options
+
+We have these options : 
+```js
+1. counter: 
+    Type: Boolem, if is true, it will display a number each log, increase by one
+2. space:
+    Type: Boolem(If is true, if will do a space after each log), Integer(If is an integer, it will do spaces in number of the space key :D )
+```
+Enjoy using Loggic!

@@ -1,12 +1,35 @@
 var templates = {}
 var log = require('./log.js')
 
-function logger(options) {
+var ops
 
+function logger(options) {
+    if (options) {
+        opts = options
+        opts.no = 0
+    }
+}
+
+function every() {
+    if (opts.counter === true) {
+        opts.no++
+    } else { 
+        opts.no = ''
+    }
+    if (opts.space) {
+        var t = opts.space
+        if (typeof t === 'number') {
+            console.log('\n'.repeat(t))
+        }
+        if (opts.space === true) {
+            console.log('\n')
+        } 
+    }
 }
 
 logger.prototype.log = (text, from) => {
-    log(text, from)
+    every()
+    log(text, from, opts)
 }
 
 logger.prototype.addTemplate = (name, text, from) => {
@@ -26,11 +49,17 @@ logger.prototype.addTemplate = (name, text, from) => {
 
 logger.prototype.loadFromTemplate = (what) => {
     
+    every()
+
     var t = templates[what]
 
-    log(t.text, t.from)
+    log(t.text, t.from, opts)
 
 }
 logger.prototype.templates = templates
+logger.prototype.logsn = opts.no
+logger.prototype.opts = opts
+logger.prototype.options = opts
+logger.prototype.config = opts
 
 module.exports = logger

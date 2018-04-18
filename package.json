@@ -1,6 +1,6 @@
 {
   "name": "loggic",
-  "version": "2.0.5",
+  "version": "2.6.10",
   "description": "A little module to help you to log things to your applications",
   "main": "index.js",
   "dependencies": {

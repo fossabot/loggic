@@ -1,11 +1,14 @@
 var loggic = require('./../index');
-var l = new loggic()
+var l = new loggic({
+})
 
 l.addTemplate('hello', {
     text: 'Hey!',
-    color: 'white'
+    color: 'red'
 })
 
+l.loadFromTemplate('hello')
+l.loadFromTemplate('hello')
 l.loadFromTemplate('hello')
 
 console.log(l.templates)
