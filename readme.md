@@ -2,6 +2,8 @@ Loggic
 ============
 A module to help you log things from your application!
 
+If you like it, star the git [repository](https://github.com/Andre221/loggic)
+
 To install, just do this  :
 ```bash
 $ npm i loggic 
