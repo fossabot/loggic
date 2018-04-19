@@ -1,1 +1,23 @@
-/node_modules/
+# ==============================
+# Files
+# ==============================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Configuration
+package-lock.json
+.env
+
+# ==============================
+# Directories
+# ==============================
+
+# Node
+.npm/
+node_modules/
+
+# Microsoft VS Code
+.vscode/
