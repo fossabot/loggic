@@ -1,7 +1,13 @@
 const moment = require('moment')
 const chalk = require('chalk')
 
-module.exports = (text, source, options) => {
+/**
+ * The log module.
+ * @param {object} text The text of the log.
+ * @param {string} source The source of the log.
+ * @param {object} options The options for the logger.
+ */
+module.exports = function (text, source, options) {
   if (!text) throw new Error('Value must be specified.')
   if (typeof text !== 'object') throw new Error('First argument must an object.')
 

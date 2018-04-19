@@ -2,6 +2,10 @@ var log = require('./log.js')
 var templates = {}
 var opts = {}
 
+/**
+ * Handles options and log cases.
+ * @param {object} options The options for the logger.
+ */
 function logger (options) {
   if (options) {
     opts = options
@@ -9,6 +13,9 @@ function logger (options) {
   }
 }
 
+/**
+ * Handles new lines and case numbers.
+ */
 var every = () => {
   if (opts.counter === true) {
     opts.num++
@@ -26,11 +33,22 @@ var every = () => {
   }
 }
 
+/**
+ * The log function.
+ * @param {string} text The text for the log.
+ * @param {string} from The source of the log.
+ */
 logger.prototype.log = (text, from) => {
   every()
   log(text, from, opts)
 }
 
+/**
+ * The template hander.
+ * @param {string} name The name of the tempate.
+ * @param {string} text The options for the tempate.
+ * @param {string} from The location of the log.
+ */
 logger.prototype.addTemplate = (name, text, from) => {
   if (!text) throw new Error('Value must be specified.')
   if (typeof text !== 'object') throw new Error('First argument must an object.')
@@ -46,9 +64,13 @@ logger.prototype.addTemplate = (name, text, from) => {
   }
 }
 
-logger.prototype.loadFromTemplate = (what) => {
+/**
+ * Template Loader.
+ * @param {string} template The template to load.
+ */
+logger.prototype.loadFromTemplate = (template) => {
   every()
-  var t = templates[what]
+  var t = templates[template]
   log(t.text, t.from, opts)
 }
 
