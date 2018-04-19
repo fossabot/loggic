@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node ./test/file.js",
+    "test": "node ./test/test.js",
     "push": "git push origin master"
   },
   "keywords": [
