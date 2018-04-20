@@ -1,19 +1,24 @@
-var chalk = require('chalk')
-var d = new Date();
+const moment = require('moment')
+const chalk = require('chalk')
 
-module.exports = (text, from, opts) => {
-    if (!text) throw "The first argument is missing."
-    if (typeof text !== 'object') throw "The first argument needs to be an object."
-    if (!from) {
-        from = process.title.split(' ')[5]
-    } else {
-        from = from.toUpperCase()
-    }
+/**
+ * The log module.
+ * @param {object} text The text of the log.
+ * @param {string} source The source of the log.
+ * @param {object} options The options for the logger.
+ */
+module.exports = function (text, source, options) {
+  if (!text) throw new Error('Value must be specified.')
+  if (typeof text !== 'object') throw new Error('First argument must an object.')
 
-    let date = chalk.grey(`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}|${d.getHours()}-${d.getMinutes()}-${d.getSeconds()}:${d.getMilliseconds()}`)
-    let de = chalk[text.color](text.text)
-    
-    var n = opts.no
+  if (!source) {
+    source = process.title.split(/(\\|\/)/g).pop()
+  } else {
+    source = source.toUpperCase()
+  }
 
-    console.log(`[${date}]-[${from}] - ${de} ${n}`)
+  var date = chalk.gray(moment().format(`YYYY-MM-DD|HH:mm:ss:SSSS`))
+  text = chalk[text.color](text.text)
+
+  console.log(`[${date}]-[${source}] - ${text} ${options.num}`)
 }

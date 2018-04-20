@@ -4,7 +4,8 @@
   "description": "A little module to help you to log things to your applications",
   "main": "index.js",
   "dependencies": {
-    "chalk": "^2.3.2"
+    "chalk": "^2.3.2",
+    "jsdoc": "^3.5.5"
   },
   "devDependencies": {},
   "scripts": {
