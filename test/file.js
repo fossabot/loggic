@@ -1,5 +1,6 @@
 var loggic = require('./../index');
 var l = new loggic({
+    counter: true
 })
 
 l.addTemplate('hello', {

@@ -57,9 +57,4 @@ logger.prototype.loadFromTemplate = (what) => {
 
 }
 logger.prototype.templates = templates
-logger.prototype.logsn = opts.no
-logger.prototype.opts = opts
-logger.prototype.options = opts
-logger.prototype.config = opts
-
 module.exports = logger

@@ -10,7 +10,7 @@ module.exports = (text, from, opts) => {
         from = from.toUpperCase()
     }
 
-    let date = chalk.gray(`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}|${d.getHours()}-${d.getMinutes()}-${d.getSeconds()}:${d.getMilliseconds()}`)
+    let date = chalk.grey(`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}|${d.getHours()}-${d.getMinutes()}-${d.getSeconds()}:${d.getMilliseconds()}`)
     let de = chalk[text.color](text.text)
     
     var n = opts.no
