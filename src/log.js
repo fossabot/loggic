@@ -3,9 +3,8 @@ const chalk = require('chalk')
 
 /**
  * The log module.
- * @param {object} text The text of the log.
+ * @param {object} conf Config of the log.
  * @param {string} source The source of the log.
- * @param {object} options The options for the logger.
  */
 module.exports = function (text, source, options) {
   if (!text) throw new Error('Value must be specified.')

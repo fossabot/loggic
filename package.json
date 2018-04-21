@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "chalk": "^2.3.2",
-    "jsdoc": "^3.5.5"
+    "events": "^2.0.0",
+    "moment": "^2.22.1"
   },
   "devDependencies": {},
   "scripts": {

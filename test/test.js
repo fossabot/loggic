@@ -1,13 +1,11 @@
 var Loggic = require('../index.js')
-var logger = new Loggic()
+var logger = new Loggic.logger()
 
-logger.addTemplate('hello', {
-  text: 'Hey!',
-  color: 'red'
+logger.event('log', () => {
+  console.log('Logged something')
 })
 
-logger.loadFromTemplate('hello')
-logger.loadFromTemplate('hello')
-logger.loadFromTemplate('hello')
-
-console.log(logger.templates)
+logger.log({
+  text: 'Love',
+  color: 'green'
+}, 'app.jss')

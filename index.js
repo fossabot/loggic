@@ -1,1 +1,1 @@
-module.exports = require('./src/loggic.js')
+module.exports = require('./src/loggic.js');
