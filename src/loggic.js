@@ -36,13 +36,12 @@ var every = () => {
 /**
  * The log function.
  * @function log
- * @param {{object, test, test}} conf The text for the log.
+ * @param {object} conf The text for the log.
  * @param {string} from The source of the log.
  */
 logger.prototype.log = (conf, from) => {
     every()
     log(conf, from, opts)
-    
 }
 
 /**
