@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ==============================
 # Files
 # ==============================
@@ -23,3 +24,28 @@ node_modules/
 
 # Microsoft VS Code
 .vscode/
+=======
+# ==============================
+# Files
+# ==============================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Configuration
+package-lock.json
+.env
+
+# ==============================
+# Directories
+# ==============================
+
+# Node
+.npm/
+node_modules/
+
+# Microsoft VS Code
+.vscode/
+>>>>>>> 9db8b3aecf436378f73a4308bce7b4ec8a3d2751

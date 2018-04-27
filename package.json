@@ -4,13 +4,17 @@
   "description": "A little module to help you to log things to your applications",
   "main": "index.js",
   "dependencies": {
+<<<<<<< HEAD
     "chalk": "^2.3.2",
     "events": "^2.0.0",
+=======
+    "chalk": "^2.4.0",
+>>>>>>> 9db8b3aecf436378f73a4308bce7b4ec8a3d2751
     "moment": "^2.22.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./test/test.js",
     "push": "git push origin master"
   },
   "keywords": [
