@@ -1,11 +1,7 @@
-var Loggic = require('../index.js')
-var logger = new Loggic.logger()
-
-logger.event('log', () => {
-  console.log('Logged something')
-})
+var Loggic = require('../index');
+var logger = new Loggic.logger();
 
 logger.log({
-  text: 'Love',
+  text: 'App started',
   color: 'green'
-}, 'app.jss')
+})

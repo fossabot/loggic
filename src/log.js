@@ -11,7 +11,7 @@ module.exports = function (text, source, options) {
   if (typeof text !== 'object') throw new Error('First argument must an object.')
 
   if (!source) {
-    source = process.title.split(/(\\|\/)/g).pop()
+    source = __filename
   } else {
     source = source.toUpperCase()
   }
