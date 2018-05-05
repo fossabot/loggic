@@ -4,6 +4,7 @@ var error = require('./log/error.js')
 
 var templates = {}
 var opts = {}
+var history = []
 
 function logger(options) {
     if (options) {
@@ -17,10 +18,16 @@ function logger(options) {
     }
 }
 
-var every = () => {};
+var every = (opts, source) => {
+    history.push({
+        opts: opts,
+        from: source
+    })
+    console.log(opts)
+};
 
 logger.prototype.log = (conf, from) => {
-    every()
+    every(conf, from)
     log(conf, from, opts)
 }
 
@@ -40,11 +47,15 @@ logger.prototype.addTemplate = (name, conf, from) => {
 }
 
 logger.prototype.loadFromTemplate = (template) => {
-    every()
     var t = templates[template]
+    every(t.conf, t.from)
     log(t.conf, t.from, opts)
 }
 
 logger.prototype.templates = templates
+
+logger.prototype.createWebView = (c) => {
+    require('./webview/server').server(c, history)
+}
 
 module.exports.logger = logger
