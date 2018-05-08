@@ -23,7 +23,6 @@ var every = (opts, source) => {
         opts: opts,
         from: source
     })
-    console.log(opts)
 };
 
 logger.prototype.log = (conf, from) => {
